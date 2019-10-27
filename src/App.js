@@ -9,10 +9,14 @@ import ChatPage from "./Pages/ChatPage/ChatPage";
 import ProfilePage from "./Pages/Profile/ProfilePage";
 import Shop from "./Pages/Shop/Shop";
 
+//Components
+import Header from "./Components/Header/Header";
+
 function App() {
   return (
     <div className="App">
       <Router>
+        <Header />
         <Switch>
           <Route exact path="/" component={Welcome} />
           <Route exact path="/dashboard" component={Dashboard} />
