@@ -5,7 +5,7 @@ import Image from "../../assests/image.png";
 const ImageOverLay = props => {
   return (
     <div>
-      <Card inverse>
+      <Card style={{ marginTop: "5rem" }} inverse>
         <CardImg width="100%" src={Image} />
         <CardImgOverlay></CardImgOverlay>
       </Card>

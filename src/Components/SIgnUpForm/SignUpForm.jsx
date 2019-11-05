@@ -57,13 +57,32 @@ class SignUpForm extends React.Component {
         </FormGroup>
         <FormGroup style={{ width: "20rem" }}>
           <Label for="gender">Gender</Label>
-          <Input type="select" name="gender">
+          <Input
+            type="select"
+            name="gender"
+            onChange={this.onChange}
+            value={this.state.gender}
+          >
             <option>Male</option>
             <option>Female</option>
             <option>Other</option>
           </Input>
         </FormGroup>
-        <Button color="success" style={{ float: "left", marginLeft: "7rem" }}>
+        <FormGroup style={{ width: "20rem" }}>
+          <Label for="exampleDate">Date</Label>
+          <Input
+            type="date"
+            name="dob"
+            placeholder="Date Of Birth"
+            onChange={this.onChange}
+            value={this.state.dob}
+          />
+        </FormGroup>
+        <Button
+          size="lg"
+          color="success"
+          style={{ float: "left", marginLeft: "6rem" }}
+        >
           Sign Up
         </Button>
       </Form>
