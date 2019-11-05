@@ -12,10 +12,11 @@ const Welcome = () => {
     <Container>
       <VideoBackground />
       <Row style={{ marginTop: "2rem" }}>
-        <Col style={{ marginRight: "3rem" }}>
+        <Col lg={6} md={5} sm={12} xs={12} style={{ marginRight: "3rem" }}>
+          <h1>Welcome To RChat</h1>
           <ImageOverlay />
         </Col>
-        <Col>
+        <Col lg={5} md={5} sm={12} xs={12}>
           <SignUpForm />
         </Col>
       </Row>

@@ -7,7 +7,8 @@ class SignUpForm extends React.Component {
     password1: "",
     password2: "",
     gender: "",
-    dob: ""
+    dob: "",
+    terms: false
   };
 
   onChange = e => {
@@ -16,11 +17,12 @@ class SignUpForm extends React.Component {
     });
   };
   render() {
+    const { terms } = this.state;
     return (
       <Form>
         <div style={{ float: "left" }}>
           <h1>Create An Account</h1>
-          <p>Its Quick And Easy</p>
+          <h4>Its Quick And Easy</h4>
         </div>
         <FormGroup style={{ width: "20rem" }}>
           <Label for="email">Email Address</Label>
@@ -56,20 +58,46 @@ class SignUpForm extends React.Component {
           ></Input>
         </FormGroup>
         <FormGroup style={{ width: "20rem" }}>
-          <Label for="gender">Gender</Label>
-          <Input
-            type="select"
-            name="gender"
-            onChange={this.onChange}
-            value={this.state.gender}
+          <Label>Gender</Label>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginLeft: "1rem",
+              backgroundColor: "white"
+            }}
           >
-            <option>Male</option>
-            <option>Female</option>
-            <option>Other</option>
-          </Input>
+            <Label check>
+              <Input
+                onChange={this.onChange}
+                type="radio"
+                name="gender"
+                value="Male"
+              />{" "}
+              Male
+            </Label>
+            <Label check>
+              <Input
+                onChange={this.onChange}
+                type="radio"
+                name="gender"
+                value="Female"
+              />{" "}
+              Female
+            </Label>
+            <Label check>
+              <Input
+                onChange={this.onChange}
+                type="radio"
+                name="gender"
+                value="Other"
+              />{" "}
+              Other
+            </Label>
+          </div>
         </FormGroup>
         <FormGroup style={{ width: "20rem" }}>
-          <Label for="exampleDate">Date</Label>
+          <Label for="exampleDate">Date Of Birth</Label>
           <Input
             type="date"
             name="dob"
@@ -78,10 +106,23 @@ class SignUpForm extends React.Component {
             value={this.state.dob}
           />
         </FormGroup>
+        <FormGroup style={{ width: "20rem" }} check>
+          <Label check>
+            <Input
+              type="checkbox"
+              onClick={() =>
+                this.setState({
+                  terms: !terms
+                })
+              }
+            />{" "}
+            Agree To Terms and Conditions
+          </Label>
+        </FormGroup>
         <Button
           size="lg"
           color="success"
-          style={{ float: "left", marginLeft: "6rem" }}
+          style={{ float: "left", marginLeft: "6rem", marginTop: "1rem" }}
         >
           Sign Up
         </Button>
