@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, Button } from 'reactstrap';
 import ImageOverlay from '../../Components/ImageOverlay/ImageOverlay';
 
 const Dashboard = () => {
@@ -11,7 +11,7 @@ const Dashboard = () => {
           <ImageOverlay />
         </Col>
       </Row>
-      <Row style={{ marginTop: '1rem' }}>
+      <Row style={{ marginTop: '2rem' }}>
         <Col>
           <h5>Gender: Male</h5>
         </Col>
@@ -19,7 +19,7 @@ const Dashboard = () => {
           <h5>Age: 28</h5>
         </Col>
       </Row>
-      <Row style={{ marginTop: '1rem' }}>
+      <Row style={{ marginTop: '2rem' }}>
         <Col>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
@@ -36,6 +36,14 @@ const Dashboard = () => {
             reiciendis possimus officia perferendis ex explicabo facere vel esse
             facilis?
           </p>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Button color="success">Start a Chat With Profile</Button>
+        </Col>
+        <Col>
+          <Button color="success"> Go Back</Button>
         </Col>
       </Row>
     </Container>
