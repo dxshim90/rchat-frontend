@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from "../../Components/WelcomePageCarousel/Carosul";
-import { Jumbotron, Button, Container, Row, Col } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 
 // components
 import SignUpForm from "../../Components/SIgnUpForm/SignUpForm";

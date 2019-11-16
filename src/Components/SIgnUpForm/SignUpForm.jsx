@@ -19,13 +19,13 @@ class SignUpForm extends React.Component {
   render() {
     const { terms } = this.state;
     return (
-      <Form>
+      <Form style={{ marginTop: "1rem" }}>
         <div style={{ float: "left" }}>
           <h1>Create An Account</h1>
           <h4>Its Quick And Easy</h4>
         </div>
         <FormGroup style={{ width: "20rem" }}>
-          <Label for="email">Email Address</Label>
+          <Label for="email" style={{fontWeight: "bold"}}>Email Address</Label>
           <Input
             type="email"
             name="email"
@@ -36,7 +36,7 @@ class SignUpForm extends React.Component {
           ></Input>
         </FormGroup>
         <FormGroup style={{ width: "20rem" }}>
-          <Label for="password">Password</Label>
+          <Label style={{fontWeight: "bold"}} for="password">Password</Label>
           <Input
             type="password"
             name="password1"
@@ -47,7 +47,7 @@ class SignUpForm extends React.Component {
           ></Input>
         </FormGroup>
         <FormGroup style={{ width: "20rem" }}>
-          <Label for="password">Confirm Password</Label>
+          <Label style={{fontWeight: "bold", textDecorationLine: "underline"}} for="password">Confirm Password</Label>
           <Input
             type="password"
             name="password2"
@@ -58,7 +58,7 @@ class SignUpForm extends React.Component {
           ></Input>
         </FormGroup>
         <FormGroup style={{ width: "20rem" }}>
-          <Label>Gender</Label>
+          <Label style={{fontWeight: "bold"}}>Gender</Label>
           <div
             style={{
               display: "flex",
@@ -97,7 +97,7 @@ class SignUpForm extends React.Component {
           </div>
         </FormGroup>
         <FormGroup style={{ width: "20rem" }}>
-          <Label for="exampleDate">Date Of Birth</Label>
+          <Label style={{fontWeight: "bold"}} for="exampleDate">Date Of Birth</Label>
           <Input
             type="date"
             name="dob"

@@ -1,6 +1,6 @@
 import React from "react";
 import VideoCover from "react-video-cover";
-import Video from "../../assests/video.mp4";
+import Video from "../../assests/video.webm";
 
 class VideoBackground extends React.Component {
   state = {
